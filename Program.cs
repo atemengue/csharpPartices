@@ -10,3 +10,5 @@ Console.Write($"Yearly wage: {yearlyWage}");
 
 Console.ReadLine();
 
+Utilities.ManipulationStrings();
+
