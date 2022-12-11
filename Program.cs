@@ -1,4 +1,7 @@
-﻿using DRH_MINADER;
+﻿
+using System.Text;
+
+using DRH_MINADER;
 
 
 Console.WriteLine("Creating Employeee");
@@ -35,3 +38,32 @@ eric.PerformWork(8);
 var receivedWageEric = eric.ReceiveWage(true);
 Console.WriteLine($"Wage paid (message from Program): {receivedWageEric}");
 
+
+string ericJson = eric.ConvertToJson();
+Console.WriteLine(ericJson);
+
+
+
+WorkTask task;
+task.description = "Bake delicious pies";
+task.hours = 3;
+task.minutes = 1;
+
+
+task.PerformWorkTask();
+
+// array 
+
+int[] simpleArray = new int[5];
+
+int[] simpleArray2 = new int[] { 1, 2, 4, 5, 5 };
+
+for (int i = 0; i < simpleArray.Length; i++)
+{
+  // Console.WriteLine()
+}
+
+List<int> employeeIdS = new List<int>();
+
+employeeIdS.Add(55);
+employeeIdS.Add(1);

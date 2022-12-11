@@ -1,4 +1,4 @@
-
+using Newtonsoft.Json;
 namespace DRH_MINADER
 {
   internal class Employee
@@ -17,6 +17,9 @@ namespace DRH_MINADER
     public DateTime birthDay;
 
     const int minimalHoursWorkedUnit = 1;
+
+    public EmployeeType employeeType; // Enumeration
+
 
     public Employee(string first, string last, string em, DateTime bd) : this(first, last, em, bd, 0)
     {
@@ -40,6 +43,23 @@ namespace DRH_MINADER
     {
       numberOfHoursWorked += numberOfHours;
       Console.WriteLine($"{firstName} {lastName} has worked for {numberOfHours} hoours(s)!");
+    }
+
+
+
+
+    public static void UsingACustomType()
+    {
+
+      List<string> list = new List<string>();
+
+    }
+
+
+    public string ConvertToJson()
+    {
+      string json = JsonConvert.SerializeObject(this);
+      return json;
     }
 
     public double ReceiveWage(bool resetHours = true)
