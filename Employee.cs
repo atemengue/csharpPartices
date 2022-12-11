@@ -5,14 +5,31 @@ namespace DRH_MINADER
   {
     public string firstName;
     public string lastName;
+
+    public int age;
+
     public string email;
 
     public int numberOfHoursWorked;
     public double wage;
     public double hourlyRate;
 
-    public DateTime birdthDay;
+    public DateTime birthDay;
 
+    const int minimalHoursWorkedUnit = 1;
+
+    public Employee(string first, string last, string em, DateTime bd) : this(first, last, em, bd, 0)
+    {
+    }
+
+    public Employee(string first, string last, string em, DateTime bd, double rate)
+    {
+      firstName = first;
+      lastName = last;
+      email = em;
+      birthDay = bd;
+      hourlyRate = rate;
+    }
     public void PerformWork()
     {
       numberOfHoursWorked++;
